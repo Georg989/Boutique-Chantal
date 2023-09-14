@@ -4,7 +4,7 @@ function About() {
   return (
     <div>
       <h2>Über uns</h2>
-      <p>Eine kurze Beschreibung Ihres Unternehmens hier einfügen.</p>
+      <p>Test test</p>
     </div>
   );
 }
