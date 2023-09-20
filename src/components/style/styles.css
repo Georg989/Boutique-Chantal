@@ -1,16 +1,25 @@
 /* Globale Stile */
+:root {
+  --text: #ffffff;
+  --background: #3e3e3e;
+  --primary: #ff0000;
+  --secondary: #410000;
+  --accent: #9e0000;
+  --font-family: serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 /* Header */
 header {
-  background-color: #dd4b39;
-  color: #fff;
+  background-color: var(--secondary);
+  color: #b6b6b6;
   padding: 10px 0;
 }
 
@@ -27,7 +36,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text);
   font-weight: bold;
   font-size: 18px;
 }
@@ -39,7 +48,7 @@ nav a {
   background-position: center;
   text-align: center;
   padding: 100px 0;
-  color: #fff;
+  color: var(--secondary);
 }
 
 .hero h1 {
@@ -53,8 +62,8 @@ nav a {
 }
 
 .btn {
-  background-color: #dd4b39;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--text);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -63,13 +72,17 @@ nav a {
 }
 
 .btn:hover {
-  background-color: #ff6347;
+  background-color: var(--accent);
 }
 
 /* Products Section */
 .products {
   padding: 50px 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .products h2 {
@@ -78,8 +91,10 @@ nav a {
 }
 
 .product {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
   padding: 20px;
   margin: 20px;
   text-align: center;
@@ -98,7 +113,7 @@ nav a {
 
 .product p {
   font-size: 16px;
-  color: #555;
+  color: var(--text);
 }
 
 /* About and Contact Sections */
@@ -114,11 +129,9 @@ nav a {
   margin-bottom: 20px;
 }
 
-/* ... Vorheriger CSS-Code ... */
-
 /* About Page */
 .about {
-  background-color: #fff;
+  background-color: var(--secondary);
   padding: 50px;
   text-align: center;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -126,7 +139,7 @@ nav a {
 
 /* Contact Page */
 .contact {
-  background-color: #fff;
+  background-color: var(--secondary);
   padding: 50px;
   text-align: center;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -159,7 +172,7 @@ nav a {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary);
   border-radius: 4px;
   font-size: 16px;
 }
@@ -169,8 +182,8 @@ nav a {
 }
 
 .contact button {
-  background-color: #dd4b39;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--text);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -182,15 +195,13 @@ nav a {
 }
 
 .contact button:hover {
-  background-color: #ff6347;
+  background-color: var(--accent);
 }
-
-/* ... Weitere Stile ... */
 
 /* Footer */
 footer {
-  background-color: #dd4b39;
-  color: #fff;
+  background-color: var(--secondary);
+  color: var(--text);
   text-align: center;
   padding: 10px 0;
 }

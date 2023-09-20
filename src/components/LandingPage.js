@@ -42,12 +42,12 @@ function LandingPage() {
 
       <section id="about" className="about">
         <h2>Über uns</h2>
-        <p>Eine kurze Beschreibung Ihres Unternehmens hier einfügen.</p>
+        <p>Eine kurze Beschreibung </p>
       </section>
 
       <section id="contact" className="contact">
         <h2>Kontaktieren Sie uns</h2>
-        <p>Kontaktinformationen hier einfügen.</p>
+        <p>Kontaktinformationen</p>
       </section>
 
       <footer>
