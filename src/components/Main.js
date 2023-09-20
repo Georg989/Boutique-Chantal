@@ -52,7 +52,7 @@ function Main() {
     <><><nav className="nav" id="menu">
           <div className="wrap">
               <div className="brand">
-                  <span>Landing Page</span>
+                <span>Boutique Chantal</span>
               </div>
               <button id="mobile-btn" className="hamburger-btn">
                   <span className="hamburger-line"></span>
