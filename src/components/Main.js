@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style/Main.scss'
-
 function Main() {
    
 (function () {
@@ -48,27 +47,45 @@ function Main() {
     document.addEventListener("DOMContentLoaded",init);
     
   })();
+  const [openMenu,setOpenMenu] = useState(false)
+  /*const [isDarkMode, setIsDarkMode] = useState(false)
+  const toggleDarkMode = () => {
+    console.log(isDarkMode)
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+  */
   return (
-    <><><nav className="nav" id="menu">
+
+    
+                  <><><nav className="nav" id="menu">
           <div className="wrap">
               <div className="brand">
-                <span>Boutique Chantal</span>
+                  <span>Boutique Chantal</span>
               </div>
-              <button id="mobile-btn" className="hamburger-btn">
+              <button onClick={() => { setOpenMenu(prev => !prev); } } id="mobile-btn" className={`hamburger-btn ${openMenu ? 'hamburger-cross' : ''}`}>
                   <span className="hamburger-line"></span>
                   <span className="hamburger-line"></span>
                   <span className="hamburger-line"></span>
               </button>
-              <ul className="top-menu" id="top-menu">
+              <ul className={openMenu ? "top-menu openMenu" : "top-menu closeMenu"} id="top-menu">
                   <li><a href="#"><i className="fa fa-home" aria-hidden="true"></i></a></li>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Contact</a></li>
               </ul>
           </div>
+
       </nav><header className="hero">
               <div className="content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cumque, placeat in.</p>
+                  <p>Wilkommen Bei Abendmode Boutique Chantal</p>
                   <button className="cta">Learn More</button>
               </div>
           </header><main className="main">

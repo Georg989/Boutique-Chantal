@@ -76,11 +76,12 @@ button,input {
   }
 }
 
+
 .top-menu {
-  display: none;
-  @media screen and (min-width: 640px) {
-    display: block;
-  }
+&.openMenu{display: block;}
+&.closeMenu{display: none;}
+ 
+  
   position: relative;
   float: right;
   transition: 200ms ease;
@@ -190,7 +191,7 @@ button,input {
   z-index: 1;
   height: 100vh;
   max-height: 1080px;
-  background-image: url('../assets/media/hero-background.jpg');
+  background-image: url('../assets/media/GirlForest.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -266,7 +267,8 @@ a {
 }
 
 .main {
-  background: #f8f8f8;
+  background: #380000;
+  color: #fff;
   .row, .tab-row {
     min-height: 200px;
     &:before, &:after{
@@ -281,7 +283,7 @@ a {
   }
 }
 .feature {
-    background-image: url('../assets/media/GirlForest.jpg');
+    background-image: url('../assets/media/hero-background.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -365,4 +367,9 @@ button.cta {
     color: $secondary;
     box-shadow: 0 0.25em 10px rgba(black,0.2);
   }
+}
+
+.dark-mode {
+  background-color: #333; // Hintergrundfarbe im Dark Mode
+  color: #fff; // Textfarbe im Dark Mode
 }
