@@ -68,7 +68,7 @@ function Main() {
                   <><><nav className="nav" id="menu">
           <div className="wrap">
               <div className="brand">
-                  <span>Boutique Chantal</span>
+                  <span>Abendmode Boutique Chantal</span>
               </div>
               <button onClick={() => { setOpenMenu(prev => !prev); } } id="mobile-btn" className={`hamburger-btn ${openMenu ? 'hamburger-cross' : ''}`}>
                   <span className="hamburger-line"></span>
@@ -86,15 +86,16 @@ function Main() {
       </nav><header className="hero">
               <div className="content">
                   <p>Wilkommen Bei Abendmode Boutique Chantal</p>
-                  <button className="cta">Learn More</button>
+                  <button className="cta">Erfahre Mehr</button>
               </div>
           </header><main className="main">
               <section>
                   <div className="tab-row">
                       <div className="col-12">
-                          <h2>Regular Section</h2>
+                          <h2>Wir sind eine Boutique im Herzen der Stadt Esslingen am Neckar, </h2>
                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos voluptatum repudiandae aliquam, sit quasi ipsa! Quidem dolorum, sit beatae laboriosam error cupiditate veniam commodi, animi, asperiores consequuntur laborum. Quod, deleniti.
+                          welche sich auf den Verkauf von Abendmode (auch Übergrößen) sowie Accessoires und Schuhen spezialisiert.
+Auch Männer können bei uns modische Anzüge finden.
                           </p>
                       </div>
                   </div>
@@ -102,9 +103,9 @@ function Main() {
               <section className="feature">
                   <div className="tab-row">
                       <div className="col-12">
-                          <h2>Feature Section</h2>
+                          <h2>Öffnungszeiten:</h2>
                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur nihil dignissimos eos repellat perferendis qui corrupti explicabo vel inventore minima.
+                              Mo. - Sa.: 10:00 - 18:30
                           </p>
                       </div>
                   </div>
@@ -134,17 +135,21 @@ function Main() {
           </main></><footer className="footer">
               <div className="row">
                   <div className="col-6">
-                      <p><i className="fa fa-phone" aria-hidden="true"></i> +44 (0)123 456 789</p>
-                      <p><i className="fa fa-envelope" aria-hidden="true"></i> info@landingpage.com</p>
+                      <p><i className="fa fa-phone" aria-hidden="true"></i>Tel. 0711 / 39 11 11 14</p>
+                      <p><i className="fa fa-envelope" aria-hidden="true"></i> Anfahrt: Neckarstraße 11</p> 
+                      <p>73728 Esslingen am Neckar</p>
                   </div>
                   <div className="col-6">
-                      <h3>Heading</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi a unde iste harum quis veritatis laudantium tempora, error veniam, incidunt?</p>
+                      <h3>Interessieren Sie sich für elegante und festlichen Mode? </h3>
+                      <p>
+
+Dann besuchen Sie uns doch in unserer Boutique Chantal 
+</p>
 
                   </div>
               </div>
               <div className="row">
-                  <div className="col-12">&copy; 2017 Brand - </div>
+                  <div className="col-12">&copy; 2013 Boutique Chantal </div>
               </div>
           </footer></>
   );
