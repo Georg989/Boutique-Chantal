@@ -5,8 +5,8 @@ $primary: rgba(255, 0, 0, 0.534);
 $secondary: rgba(0, 0, 0, 0.767);
 $accent: complement($primary);
 $accent2: complement($secondary);
-$bgcolour: linear-gradient(to bottom right,$primary,$secondary);
-$bgcolour2: linear-gradient(to top left,$primary,$secondary);
+$bgcolour: linear-gradient(to top left,$primary,$secondary);
+$bgcolour2: linear-gradient(to bottom right,$primary,$secondary);
 $bgcolour3: linear-gradient(to bottom left,$accent,$accent2);
 $bgcolour4: linear-gradient(to top right,$accent,$accent2);
 
@@ -65,13 +65,11 @@ button,input {
   color: rgb(255, 255, 255);
   font-weight: 500;
   padding-left: 1rem;
-  span {
-    font-size: .9em;
-    font-weight: 700;
-  }
+
   img {
     vertical-align: middle;
     height: calc(#{$nav-height} - 1rem);
+    width: auto; 
     margin-right: .5rem;
   }
 }
@@ -207,21 +205,25 @@ button,input {
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 200px;
     background: $bgcolour;
     opacity: 0.9;
     z-index: -1;
   }
   h1 {
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 1rem;
-    
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   }
   p {
-    font-size: 2em;
+    font-size: large;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-weight: 300;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   }
   .content {
     display: table-cell;
@@ -235,7 +237,7 @@ h1,h2,p {
 
 h2 {
   font-size: 2rem;
-  line-height: 0.5;
+  line-height: 1;
 }
 
 a {
@@ -303,9 +305,17 @@ a {
     z-index: -1;
   }
 }
+.anfahrt {
+  padding: 0 1rem;
+    min-height: auto;
+    height: auto;
+  
+
+
+}
 
 .footer {
-  background: $bgcolour;
+  background: $bgcolour2;
   color: $accent2;
   padding: 2rem;
   li {
@@ -319,6 +329,10 @@ a {
     border: 0;
     height: 1px;
     background: neutral($primary,2);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -351,7 +365,14 @@ a {
 
 .col-12 {
   @extend %col;
-  //width: 100%;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 2px 4px rgba(#000,0.2);
+  line-height: 40px;
+  @media screen and (min-width: 640px) {
+    width: 50%;
+  }
 }
 
 button.cta {
