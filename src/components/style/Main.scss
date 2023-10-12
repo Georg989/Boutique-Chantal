@@ -313,7 +313,10 @@ a {
 
 
 }
-
+.Carousel{
+  margin: auto;
+  flex-basis: content;
+}
 .footer {
   background: $bgcolour2;
   color: $accent2;

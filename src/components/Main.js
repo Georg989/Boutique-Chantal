@@ -119,6 +119,7 @@ Auch Männer können bei uns modische Anzüge finden.
               </section>
               <section>
                   <div className="tab-row">
+                    <div  className='Carousel'>
                       <div className="col-4">
                           <h2>Abendkleider</h2>
                           <img src={Abendkleider}></img>
@@ -130,6 +131,7 @@ Auch Männer können bei uns modische Anzüge finden.
                       <div className="col-4">
                           <h2>Schuhe</h2>
                           <img src={Schuhe}></img>
+                      </div>
                       </div>
                   </div>
               </section>
