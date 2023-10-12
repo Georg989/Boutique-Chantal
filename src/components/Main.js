@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './style/Main.scss'
 import AnfahrtPNG from './assets/media/anfahrt.PNG'
 import Logo from './assets/media/Logolucent.png'
+import Abendkleider from './assets/media/FrauRose.jpg'
+import Accessoires from './assets/media/FrauPink.jpg'
+import Schuhe from './assets/media/FrauLila.jpg'
 function Main() {
    
 (function () {
@@ -118,41 +121,32 @@ Auch Männer können bei uns modische Anzüge finden.
                   <div className="tab-row">
                       <div className="col-4">
                           <h2>Abendkleider</h2>
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga porro sapiente, corporis dignissimos laudantium illo expedita corrupti asperiores esse quae.
-                          </p>
+                          <img src={Abendkleider}></img>
                       </div>
                       <div className="col-4">
                           <h2>Accessoires</h2>
-                          <p>
-                              Repellat qui, dolores nemo asperiores incidunt quidem dolorum. Quos, deleniti neque architecto dolore magni aliquid. Inventore suscipit consequuntur excepturi ipsam.
-                          </p>
+                          <img src={Accessoires}></img>
                       </div>
                       <div className="col-4">
                           <h2>Schuhe</h2>
-                          <p>
-                              Doloribus perferendis a ipsum ad, consectetur animi aliquam maxime, earum aspernatur, ea commodi tempore suscipit explicabo cupiditate at nemo quae.
-                          </p>
+                          <img src={Schuhe}></img>
                       </div>
                   </div>
               </section>
               
           </main></><footer className="footer">
               <div className="row">
+                <div className="col-6">
+                    <h3>Interessieren Sie sich für elegante und festlichen Mode? </h3>
+                    <p>Dann besuchen Sie uns doch in unserer Boutique Chantal </p>
+                </div>
                   <div className="col-6">
                       <p><i className="fa fa-phone" aria-hidden="true"></i>Tel. 0711 / 39 11 11 14</p> 
                       <p id='Anfahrt'>Anfahrt</p>
                     <img src={AnfahrtPNG} alt="Anfahrt"></img>
                       <p>73728 Esslingen am Neckar</p>
                   </div>
-                  <div className="col-6">
-                      <h3>Interessieren Sie sich für elegante und festlichen Mode? </h3>
-                      <p>
-
-Dann besuchen Sie uns doch in unserer Boutique Chantal 
-</p>
-
-                  </div>
+                  
               </div>
               <div className="row">
                   <div className="col-12">&copy; 2013 Boutique Chantal </div>
