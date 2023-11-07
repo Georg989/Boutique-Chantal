@@ -57,6 +57,7 @@ button,input {
   height: 60px;
   width: 100%;
   transition: 300ms ease;
+  background: #240101;
 }
 
 .brand {
@@ -313,10 +314,52 @@ a {
 
 
 }
-.Carousel{
-  margin: auto;
-  flex-basis: content;
+.section-with-carousel {
+  padding: 0 1rem;
+    min-height: 400px;
+    height: 62vh;
+  overflow: hidden; /* Verhindert, dass das Carousel die Section überlappt */
 }
+
+.carousel {
+  padding: 1%;
+  max-width: auto;
+  max-height: auto; /* Füge diese Zeile hinzu, um die Höhe an die Section anzupassen */
+  display: block;
+  margin: 0 auto; /* Zentriere das Carousel horizontal */
+}
+
+.carousel .thumbs-wrapper {
+  display: none; // Verberge Miniaturansichten
+}
+
+.carousel .slider {
+  position: relative;
+  width: 100%;
+}
+.carousel .slide img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+.carousel .slide {
+  width: 100%;
+  max-height: 100%; /* Füge diese Zeile hinzu, um die Höhe an die Section anzupassen */
+  object-fit: cover; /* Skaliert die Bilder in der Section, ohne das Seitenverhältnis zu verzerren */
+}
+
+.carousel .carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; // Hintergrundfarbe des Carousels
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
 .footer {
   background: $bgcolour2;
   color: $accent2;

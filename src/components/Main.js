@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import './style/Main.scss'
 import AnfahrtPNG from './assets/media/anfahrt.PNG'
 import Logo from './assets/media/Logolucent.png'
-import Abendkleider from './assets/media/FrauRose.jpg'
-import Accessoires from './assets/media/FrauPink.jpg'
-import Schuhe from './assets/media/FrauLila.jpg'
+// import Abendkleider from './assets/media/FrauRose.jpg'
+// import Accessoires from './assets/media/FrauPink.jpg'
+// import Schuhe from './assets/media/FrauLila.jpg'
+// import CarouBilder from './assets/media/carousel'
 function Main() {
    
 (function () {
@@ -53,6 +56,13 @@ function Main() {
     
   })();
   const [openMenu,setOpenMenu] = useState(false)
+  const [carouselImages, setCarouselImages] = useState([]);
+
+  useEffect(() => {
+    const importAll = (r) => r.keys().map(r);
+    const images = importAll(require.context('./assets/media/carousel', false, /\.(png|jpe?g|svg)$/));
+    setCarouselImages(images);
+  }, []);
   /*const [isDarkMode, setIsDarkMode] = useState(false)
   const toggleDarkMode = () => {
     console.log(isDarkMode)
@@ -70,7 +80,9 @@ function Main() {
   return (
 
     
-                  <><><nav className="nav" id="menu">
+    <>
+    <>
+        <nav className="nav" id="menu">
           <div className="wrap">
               <div className="brand">
                     <img src={Logo} alt="Logo"></img>
@@ -117,24 +129,17 @@ Auch Männer können bei uns modische Anzüge finden.
                       </div>
                   </div>
               </section>
-              <section>
-                  <div className="tab-row">
-                    <div  className='Carousel'>
-                      <div className="col-4">
-                          <h2>Abendkleider</h2>
-                          <img src={Abendkleider}></img>
-                      </div>
-                      <div className="col-4">
-                          <h2>Accessoires</h2>
-                          <img src={Accessoires}></img>
-                      </div>
-                      <div className="col-4">
-                          <h2>Schuhe</h2>
-                          <img src={Schuhe}></img>
-                      </div>
-                      </div>
-                  </div>
-              </section>
+              <section className="section-with-carousel">
+  <div className="tab-row">
+  <Carousel showArrows={true} showThumbs={true} dynamicHeight={true}>
+  {carouselImages.map((image, index) => (
+    <div key={index}>
+      <img src={image} alt={`Bild ${index}`} />
+    </div>
+  ))}
+</Carousel>
+  </div>
+</section>
               
           </main></><footer className="footer">
               <div className="row">
